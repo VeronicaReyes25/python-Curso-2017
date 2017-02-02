@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%block estilos %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {%  endblock %}
+
+    {% block titulo %} /*parte de la paguina a ser renderizada*/
+        <title>{{ titulo}}</title>
+    {% endblock %}
+
+</head>
+<body>
+{% block header %}
+    <h1>  Paguina de inicio de la app  </h1>>
+{% endblock %}
+
+{% block content  %}
+    <h6>  paguina principal </h6>
+      {% if valor < 21 %}
+        <span> Valor menor a 21</span>
+           <hr>
+    {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+    <span>UES 2017 </span>
+
+{% endblock %}
+
+{%block js%}
+  <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
+
+
+</body>
+</html>
